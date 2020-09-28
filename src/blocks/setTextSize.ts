@@ -5,27 +5,24 @@ import Cast from 'scratch-vm/src/util/cast'
 import { BlockInfo } from './index'
 import { translations } from '../translations'
 
-const SayBlock = {
+const SetTextSizeBlock = {
   info(): BlockInfo {
     return {
-      opcode: 'say',
-      blockType: BlockType.REPORTER,
-      text: translations.label('say'),
+      opcode: 'setTextSize',
+      blockType: BlockType.COMMAND,
+      text: translations.label('setTextSize'),
       arguments: {
-        MESSAGE: {
-          type: ArgumentType.STRING,
-          defaultValue: 'Hello, World!',
+        SIZE: {
+          type: ArgumentType.NUMBER,
+          defaultValue: 32,
         },
       },
     }
   },
 
-  say(args: any) {
-    const message = Cast.toString(args.MESSAGE)
-    console.log(message)
-
-    return message
+  setTextSize(args: any) {
+    this.property.text.size = Cast.toNumber(args.SIZE)
   },
 }
 
-export default SayBlock
+export default SetTextSizeBlock

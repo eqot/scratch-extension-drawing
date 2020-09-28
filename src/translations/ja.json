@@ -1,7 +1,10 @@
 {
-  "say": "[MESSAGE]と言う",
+  "clearAll": "全部消す",
 
-  "showSprite": "ログに[TARGET]を表示する",
-  "all sprites": "すべてのスプライト",
-  "this sprite": "このスプライト"
+  "drawText": "[TEXT]をx座標[X]、y座標[Y]に描く",
+
+  "setTextColor": "テキストの色を[COLOR]にする",
+  "setTextSize": "テキストの大きさを[SIZE]ピクセルにする",
+
+  "drawRectangle": "四角をx座標[X1]、y座標[Y1]からx座標[X2]、y座標[Y2]に描く"
 }

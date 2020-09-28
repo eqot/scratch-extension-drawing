@@ -1,7 +1,8 @@
 {
-  "say": "[MESSAGE]という",
+  "clearAll": "ぜんぶけす",
 
-  "showSprite": "ログに[TARGET]をひょうじする",
-  "all sprites": "すべてのスプライト",
-  "this sprite": "このスプライト"
+  "drawText": "[TEXT]をxざひょう[X]、yざひょう[Y]にかく",
+
+  "setTextColor": "テキストのいろを[COLOR]にする",
+  "setTextSize": "テキストのおおきさを[SIZE]ピクセルにする"
 }

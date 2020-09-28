@@ -1,5 +1,5 @@
 {
-  "name": "scratch-extension-template",
+  "name": "scratch-extension-drawing",
   "version": "0.1.0",
   "main": "dist/index.js",
   "license": "MIT",
@@ -7,6 +7,9 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack"
+  },
+  "dependencies": {
+    "@svgdotjs/svg.js": "^3.0.16"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

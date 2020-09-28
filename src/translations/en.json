@@ -1,7 +1,8 @@
 {
-  "say": "say [MESSAGE]",
+  "clearAll": "clear all",
 
-  "showSprite": "show [TARGET] in log",
-  "all sprites": "all sprites",
-  "this sprite": "this sprite"
+  "drawText": "draw [TEXT] at x:[X] y:[Y]",
+
+  "setTextColor": "Set text color to [COLOR]",
+  "setTextSize": "Set text size to [SIZE] pixel"
 }
