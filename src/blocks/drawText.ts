@@ -38,6 +38,8 @@ const DrawTextBlock = {
       .font({
         size: this.property.text.size,
         family: this.property.text.fontFamily,
+        style: this.property.text.style,
+        weight: this.property.text.weight,
         fill: this.property.text.color,
         anchor: getAnchor(this.property.text.hAlignment),
       })

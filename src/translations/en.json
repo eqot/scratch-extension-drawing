@@ -4,13 +4,22 @@
   "drawText": "draw [TEXT] at x:[X] y:[Y]",
 
   "setTextColor": "set text color to [COLOR]",
+
   "setTextSize": "set text size to [SIZE] pixel",
+
   "setTextAlignment": "set text alignment to [H_ALIGNMENT][V_ALIGNMENT]",
   "left": "left",
   "right": "right",
   "top": "top",
   "bottom": "bottom",
   "center": "center",
+
+  "setTextStyle": "set text style to [STYLE][WEIGHT]",
+  "normal": "normal",
+  "italic": "italic",
+  "bold": "bold",
+  "bolder": "bolder",
+  "lighter": "lighter",
 
   "drawRectangle": "draw rectangle from x:[X1] y:[Y1] to x:[X2] y:[Y2]"
 }

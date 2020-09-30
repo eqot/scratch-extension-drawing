@@ -4,13 +4,22 @@
   "drawText": "[TEXT]をxざひょう[X]、yざひょう[Y]にかく",
 
   "setTextColor": "テキストのいろを[COLOR]にする",
+
   "setTextSize": "テキストのおおきさを[SIZE]ピクセルにする",
+
   "setTextAlignment": "テキストのはいちを[H_ALIGNMENT][V_ALIGNMENT]よせにする",
   "left": "ひだり",
   "right": "みぎ",
   "top": "うえ",
   "bottom": "した",
   "center": "ちゅうおう",
+
+  "setTextStyle": "テキストのスタイルを[STYLE][WEIGHT]にする",
+  "normal": "標準",
+  "italic": "イタリック",
+  "bold": "ボールド",
+  "bolder": "ボールダー",
+  "lighter": "ライター",
 
   "drawRectangle": "しかくをxざひょう[X1]、yざひょう[Y1]からxざひょう[X2]、yざひょう[Y2]にかく"
 }

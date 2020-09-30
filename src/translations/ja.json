@@ -4,13 +4,22 @@
   "drawText": "[TEXT]をx座標[X]、y座標[Y]に描く",
 
   "setTextColor": "テキストの色を[COLOR]にする",
+
   "setTextSize": "テキストの大きさを[SIZE]ピクセルにする",
+
   "setTextAlignment": "テキストの配置を[H_ALIGNMENT][V_ALIGNMENT]寄せにする",
   "left": "左",
   "right": "右",
   "top": "上",
   "bottom": "下",
   "center": "中央",
+
+  "setTextStyle": "テキストのスタイルを[STYLE][WEIGHT]にする",
+  "normal": "標準",
+  "italic": "イタリック",
+  "bold": "ボールド",
+  "bolder": "ボールダー",
+  "lighter": "ライター",
 
   "drawRectangle": "四角をx座標[X1]、y座標[Y1]からx座標[X2]、y座標[Y2]に描く"
 }
