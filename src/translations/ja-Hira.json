@@ -4,5 +4,13 @@
   "drawText": "[TEXT]をxざひょう[X]、yざひょう[Y]にかく",
 
   "setTextColor": "テキストのいろを[COLOR]にする",
-  "setTextSize": "テキストのおおきさを[SIZE]ピクセルにする"
+  "setTextSize": "テキストのおおきさを[SIZE]ピクセルにする",
+  "setTextPosition": "テキストを[H_POSITION][V_POSITION]よせにする",
+  "left": "ひだり",
+  "right": "みぎ",
+  "top": "うえ",
+  "bottom": "した",
+  "center": "ちゅうおう",
+
+  "drawRectangle": "しかくをxざひょう[X1]、yざひょう[Y1]からxざひょう[X2]、yざひょう[Y2]にかく"
 }

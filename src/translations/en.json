@@ -3,6 +3,14 @@
 
   "drawText": "draw [TEXT] at x:[X] y:[Y]",
 
-  "setTextColor": "Set text color to [COLOR]",
-  "setTextSize": "Set text size to [SIZE] pixel"
+  "setTextColor": "set text color to [COLOR]",
+  "setTextSize": "set text size to [SIZE] pixel",
+  "setTextPosition": "set text position to [H_POSITION][V_POSITION]",
+  "left": "left",
+  "right": "right",
+  "top": "top",
+  "bottom": "bottom",
+  "center": "center",
+
+  "drawRectangle": "draw rectangle from x:[X1] y:[Y1] to x:[X2] y:[Y2]"
 }

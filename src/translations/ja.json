@@ -5,6 +5,12 @@
 
   "setTextColor": "テキストの色を[COLOR]にする",
   "setTextSize": "テキストの大きさを[SIZE]ピクセルにする",
+  "setTextPosition": "テキストを[H_POSITION][V_POSITION]寄せにする",
+  "left": "左",
+  "right": "右",
+  "top": "上",
+  "bottom": "下",
+  "center": "中央",
 
   "drawRectangle": "四角をx座標[X1]、y座標[Y1]からx座標[X2]、y座標[Y2]に描く"
 }
