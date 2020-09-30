@@ -12,20 +12,14 @@ class DrawingExtension {
     'drawText',
     'setTextColor',
     'setTextSize',
+    'setTextPosition',
     '---',
     'drawRectangle',
   ]
 
-  private static LAYER_NAME = 'scratch-extension-drawing'
+  private static LAYER_NAME = 'sprite'
 
-  private runtime: Runtime
-  private blocks
-
-  private skinId: number = -1
-
-  private draw: any
-
-  private property = {
+  private static INITIAL_PROPERTY = {
     text: {
       size: 32,
       color: '#000000',
@@ -34,6 +28,15 @@ class DrawingExtension {
       vPosition: 'top',
     },
   }
+
+  private runtime: Runtime
+  private blocks
+
+  private drawableId?: number = null
+  private skinId?: number = null
+
+  private draw: any
+  private property: any
 
   constructor(runtime: Runtime, locale?: string) {
     this.runtime = runtime
@@ -44,7 +47,13 @@ class DrawingExtension {
     this.blocks.inject(this)
 
     runtime.on(Runtime.PROJECT_LOADED, () => {
-      this.createSVGLayer()
+      if (this.skinId !== null) {
+        this.removeSvgLayer()
+      }
+
+      this.createSvgLayer()
+
+      this.property = JSON.parse(JSON.stringify(DrawingExtension.INITIAL_PROPERTY))
     })
   }
 
@@ -63,25 +72,24 @@ class DrawingExtension {
     }
   }
 
-  private createSVGLayer(): void {
-    if (this.skinId !== -1) {
-      return
-    }
-
+  private createSvgLayer(): void {
     const { renderer } = this.runtime
-    const size = renderer.getNativeSize()
+    const [width, height] = renderer.getNativeSize()
 
-    this.draw = SVG().size(size[0], size[1])
-    this.draw.viewbox(0, 0, size[0], size[1])
+    this.draw = SVG().size(width, height)
+    this.draw.viewbox(0, 0, width, height)
 
-    const layers = renderer._groupOrdering
-    layers.push(DrawingExtension.LAYER_NAME)
-    renderer.setLayerGroupOrdering(layers)
-
-    const drawableId = renderer.createDrawable(DrawingExtension.LAYER_NAME)
     this.skinId = renderer.createSVGSkin(this.draw.svg())
+    this.drawableId = renderer.createDrawable(DrawingExtension.LAYER_NAME)
+    renderer.updateDrawableProperties(this.drawableId, { skinId: this.skinId })
+  }
 
-    renderer.updateDrawableProperties(drawableId, { skinId: this.skinId })
+  private removeSvgLayer() {
+    this.runtime.renderer.destroyDrawable(this.drawableId, DrawingExtension.LAYER_NAME)
+    this.runtime.renderer.destroySkin(this.skinId)
+
+    this.drawableId = null
+    this.skinId = null
   }
 
   private updateSVGLayer(): void {
