@@ -5,7 +5,7 @@
 
   "setTextColor": "set text color to [COLOR]",
   "setTextSize": "set text size to [SIZE] pixel",
-  "setTextPosition": "set text position to [H_POSITION][V_POSITION]",
+  "setTextAlignment": "set text alignment to [H_ALIGNMENT][V_ALIGNMENT]",
   "left": "left",
   "right": "right",
   "top": "top",

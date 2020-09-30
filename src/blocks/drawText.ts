@@ -39,16 +39,16 @@ const DrawTextBlock = {
         size: this.property.text.size,
         family: this.property.text.fontFamily,
         fill: this.property.text.color,
-        anchor: getAnchor(this.property.text.hPosition),
+        anchor: getAnchor(this.property.text.hAlignment),
       })
-      .attr({ 'dominant-baseline': getDominantBaseline(this.property.text.vPosition) })
+      .attr({ 'dominant-baseline': getDominantBaseline(this.property.text.vAlignment) })
 
     this.updateSVGLayer()
   },
 }
 
-function getAnchor(position: string): string {
-  switch (position) {
+function getAnchor(alignment: string): string {
+  switch (alignment) {
     case 'left':
       return 'start'
 
@@ -63,8 +63,8 @@ function getAnchor(position: string): string {
   }
 }
 
-function getDominantBaseline(position: string): string {
-  switch (position) {
+function getDominantBaseline(alignment: string): string {
+  switch (alignment) {
     case 'top':
       return 'hanging'
 

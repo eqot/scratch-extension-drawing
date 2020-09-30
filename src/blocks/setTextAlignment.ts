@@ -5,20 +5,20 @@ import Cast from 'scratch-vm/src/util/cast'
 import { BlockInfo } from './index'
 import { translations } from '../translations'
 
-const SetTextPositionBlock = {
+const SetTextAlignmentBlock = {
   info(): BlockInfo {
     return {
-      opcode: 'setTextPosition',
+      opcode: 'setTextAlignment',
       blockType: BlockType.COMMAND,
-      text: translations.label('setTextPosition'),
+      text: translations.label('setTextAlignment'),
       arguments: {
-        H_POSITION: {
+        H_ALIGNMENT: {
           type: ArgumentType.STRING,
-          menu: 'hPosition',
+          menu: 'hAlignment',
         },
-        V_POSITION: {
+        V_ALIGNMENT: {
           type: ArgumentType.STRING,
-          menu: 'vPosition',
+          menu: 'vAlignment',
         },
       },
     }
@@ -26,7 +26,7 @@ const SetTextPositionBlock = {
 
   menus(): object {
     return {
-      hPosition: {
+      hAlignment: {
         items: [
           {
             value: 'left',
@@ -43,7 +43,7 @@ const SetTextPositionBlock = {
         ],
         acceptReporters: true,
       },
-      vPosition: {
+      vAlignment: {
         items: [
           {
             value: 'top',
@@ -63,10 +63,10 @@ const SetTextPositionBlock = {
     }
   },
 
-  setTextPosition(args: any) {
-    this.property.text.hPosition = Cast.toString(args.H_POSITION)
-    this.property.text.vPosition = Cast.toString(args.V_POSITION)
+  setTextAlignment(args: any) {
+    this.property.text.hAlignment = Cast.toString(args.H_ALIGNMENT)
+    this.property.text.vAlignment = Cast.toString(args.V_ALIGNMENT)
   },
 }
 
-export default SetTextPositionBlock
+export default SetTextAlignmentBlock

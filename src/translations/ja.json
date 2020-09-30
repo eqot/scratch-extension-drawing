@@ -5,7 +5,7 @@
 
   "setTextColor": "テキストの色を[COLOR]にする",
   "setTextSize": "テキストの大きさを[SIZE]ピクセルにする",
-  "setTextPosition": "テキストを[H_POSITION][V_POSITION]寄せにする",
+  "setTextAlignment": "テキストの配置を[H_ALIGNMENT][V_ALIGNMENT]寄せにする",
   "left": "左",
   "right": "右",
   "top": "上",

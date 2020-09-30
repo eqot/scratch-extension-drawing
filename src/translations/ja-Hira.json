@@ -5,7 +5,7 @@
 
   "setTextColor": "テキストのいろを[COLOR]にする",
   "setTextSize": "テキストのおおきさを[SIZE]ピクセルにする",
-  "setTextPosition": "テキストを[H_POSITION][V_POSITION]よせにする",
+  "setTextAlignment": "テキストのはいちを[H_ALIGNMENT][V_ALIGNMENT]よせにする",
   "left": "ひだり",
   "right": "みぎ",
   "top": "うえ",

@@ -12,7 +12,7 @@ class DrawingExtension {
     'drawText',
     'setTextColor',
     'setTextSize',
-    'setTextPosition',
+    'setTextAlignment',
     '---',
     'drawRectangle',
   ]
@@ -24,8 +24,8 @@ class DrawingExtension {
       size: 32,
       color: '#000000',
       fontFamily: 'Menlo, sans-serif',
-      hPosition: 'left',
-      vPosition: 'top',
+      hAlignment: 'left',
+      vAlignment: 'top',
     },
   }
 
